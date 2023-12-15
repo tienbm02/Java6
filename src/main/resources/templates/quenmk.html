@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Quên mật khẩu</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container" style="width: 600px;">
+		<h5 class="text-center" style="margin-top: 100px;">QUÊN MẬT KHẨU</h5>
+		<div class="card">
+			<div class="card-body">
+				<form class="d-grid gap-1" method="post"
+					th:action="@{/user/forgot/check}" th:object="${checkTK}">
+					<div class="mb-3">
+						<label for="username" class="form-label">Username:</label> <input
+							type="text" class="form-control" id="Username" name="Username"
+							th:field="*{Username}" /> <i><span
+							th:if="${#fields.hasErrors('Username')}" th:errors="*{Username}"
+							style="color: red;"></span> </i> <br> <i> <span style="color: red;">[[${messageU}]]
+						</span>
+						</i>
+
+					</div>
+					<div class="mb-3">
+						<label for="email" class="form-label">Email:</label> <input
+							type="email" th:field="*{gmail}" class="form-control" id="email"
+							name="email" placeholder="name@example.com" /> <i> <span
+							th:if="${#fields.hasErrors('gmail')}" th:errors="*{gmail}"
+							style="color: red;"></span> <i><span style="color: red;">[[${messageE}]]
+							</span></i>
+					</div>
+					<button class="btn btn-danger" type="submit">Tiếp tục</button>
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

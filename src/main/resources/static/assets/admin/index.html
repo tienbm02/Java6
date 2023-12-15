@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quản lý - product</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+		integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
+		integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.js"
+		integrity="sha512-tfrAMEcgRMbx1MeQrt2H/TrwaKG+m0ngUQ7R+hM9ZLD3SbwAvXsL1p0DwbTwv05EfES22HtfIged4iuHqmWYsw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<style>
+		/*dùng ảnh gif*/
+
+		.load {
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 100000000000;
+			display: block;
+			overflow: hidden;
+		}
+
+		.load img {
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -75px;
+			margin-left: -75px;
+		}
+	</style>
+
+</head>
+
+<body ng-app="admin-app">
+	<div class="load">
+		<img src="loader.gif">
+	</div>
+	<div class="row" style="margin-top: 1px;">
+		<div class="col-2" style="background-image: linear-gradient(-90deg, #cdbbcd, #8baccd);">
+			<div class="d-flex align-items-start">
+				<div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical"
+					style="text-align: center;">
+					<div class="shadow p-3 mb-5 bg-body rounded" style="margin-top: 12px; min-width: 119%;border-bottom: 2px solid black;">Quản lý</b></div>
+					<a class="nav-link text-dark text-center" href="#!thongke">Home</a>
+					<a class="nav-link text-dark text-center" href="#!sanpham">Sản Phẩm</a>
+					<a href="#!TaiKhoan" class="nav-link text-dark text-center">Messages</a>
+					<button class="nav-link text-dark text-center" id="v-pills-settings-tab" data-bs-toggle="pill"
+						data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+						aria-selected="false">Settings</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-10">
+			<span ng-view></span>
+		</div>
+	</div>
+	<script src="admin-app.js"></script>
+	<script src="./sanpham/sanpham-ctrl.js"></script>
+	<script src="./thongke/thongke-ctrl.js"></script>
+	<script src="./taikhoan/taikhoan_ctrl.js"></script>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script>
+		$(window).on('load', function (event) {
+			$('body').removeClass('preloading');
+			$('.load').delay(1000).fadeOut('fast');
+			//$('.loader').delay(1000).fadeOut('fast');
+		});
+	</script>
+</body>
+
+</html>

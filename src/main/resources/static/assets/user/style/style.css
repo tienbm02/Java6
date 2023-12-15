@@ -1,0 +1,61 @@
+header {
+    height: 100px;
+}
+
+header .d-flex ul>li {
+    margin-top: 25px;
+}
+
+button span {
+    color: gray;
+}
+
+button:focus span {
+    color: yellow !important;
+}
+
+button:focus {
+    color: yellow !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-left: 2px solid yellow !important;
+    margin-left: 20px !important;
+    border-radius: 0px !important;
+}
+
+.active {
+    color: yellow !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-left: 2px solid yellow !important;
+    margin-left: 20px !important;
+    border-radius: 0px !important;
+}
+
+button:hover {
+    background-color: #242526;
+    margin-left: 20px !important;
+}
+
+.row .col-6 .tt {
+    width: 37rem;
+    height: 10rem;
+    border-radius: 10px;
+    background-color: #363738;
+}
+
+.row .col-6 .tt:hover {
+    color: yellow;
+    background: rgba(0, 0, 0, 0.5) !important
+}
+
+.tt .text-center .row .col {
+    margin-top: 1rem;
+    color: white;
+}
+
+.tt .text-center .row .col b {
+    font-size: 20px;
+}
+
+.tt .text-center .row .col .fullname {
+    margin-top: 2rem;
+}

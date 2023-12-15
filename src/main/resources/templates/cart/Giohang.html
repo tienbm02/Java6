@@ -1,0 +1,174 @@
+<!doctype html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/layout_cart.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.js" integrity="sha512-tfrAMEcgRMbx1MeQrt2H/TrwaKG+m0ngUQ7R+hM9ZLD3SbwAvXsL1p0DwbTwv05EfES22HtfIged4iuHqmWYsw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body ng-app="shopping-cart-app" ng-controller="shopping-cart-ctrl" th:fragment="shopping_cart">
+
+  
+
+    <!-- header slide -->
+
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://theme.hstatic.net/1000376021/1000834008/14/slideshow_1.jpg?v=986" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://theme.hstatic.net/1000376021/1000834008/14/slideshow_2.jpg?v=986" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://theme.hstatic.net/1000376021/1000834008/14/slideshow_3.jpg?v=986" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://theme.hstatic.net/1000376021/1000834008/14/slideshow_4.jpg?v=986" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://theme.hstatic.net/1000376021/1000834008/14/slideshow_5.jpg?v=986" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon " style="background-color: black;" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" style="background-color: black;" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container" ng-app="shopping-cart-app" ng-controller="shopping-cart-ctrl">
+    
+        <div class="row">
+        <div id="layout-cart">
+            <div class="container-fluid">
+                <div class="row breadcrumb-shop">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
+                        <ol class="breadcrumb breadcrumb-arrows" itemscope
+                            itemtype="http://schema.org/BreadcrumbList">
+                            <li itemprop="itemListElement" itemscope
+                                itemtype="http://schema.org/ListItem"><a href="/"
+                                target="_self" itemprop="item"><span itemprop="name">Trang
+                                        chủ &nbsp;</span></a>
+                                <meta itemprop="position" content="1" /></li>
+
+                            <li class="active" itemprop="itemListElement" itemscope
+                                itemtype="http://schema.org/ListItem"><span
+                                itemprop="item" content="https://shooz.vn/cart"><strong
+                                    itemprop="name"> Giỏ hàng {{cart.count}}</strong></span>
+                                <meta itemprop="position" content="2" /></li>
+
+                        </ol>
+                    </div>
+                </div>
+                <div class="row pd-page"  >
+                    <div class="col-md-12 col-xs-12 heading-page">
+                        <div class="header-page">
+                            <h2>Giỏ hàng của bạn</h2>
+                            <p class="count-cart">
+                                Có <b>{{cart.count}} sản phẩm</b> trong giỏ hàng
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xs-12 wrapbox-content-cart">
+                        <div class="cart-container">
+                            <div class="cart-col-left">
+                                <div class="main-content-cart">
+                                    <form action="/cart" method="post" id="cartformpage">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <table class="table-cart" ng-repeat="item in cart.items">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="image">&nbsp;</th>
+                                                            <th class="item">Tên sản phẩm</th>
+                                                            <th class="remove">&nbsp;</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                        <tr class="line-item-container"
+                                                            data-variant-id="1088503937">
+                                                            <td class="image">
+                                                                <div class="product_image">
+                                                                    <a
+                                                                        href="/products/giay-sandals-tre-em-geox-j-s-starblush-g-b-j25fyb-000bc-den">
+                                                                        <img ng-src="/image/sanpham/{{item.hinh1}}" alt="">
+                                                                    </a>
+                                                                  
+                                                                </div>
+                                                            </td>
+                                                            <td class="item"><a
+                                                                href="/products/giay-sandals-tre-em-geox-j-s-starblush-g-b-j25fyb-000bc-den">
+                                                                    <h3 >{{item.tenSP}}</h3>
+                                                            </a>
+                                                                <p>
+                                                                    <span>${{item.gia| number:2}}</span>
+
+                                                                </p>
+                                                                <p class="variant">
+
+                                                                    <span class="variant_title">34 / Đen / SS22</span>
+
+                                                                </p>
+                                                               <div class="col-3"><b>SỐ LƯỢNG:</b></div>
+                        <div class="col-4">
+                            <input ng-change="cart.saveToLocalStorage()" ng-model="item.qty" type="number" class="" id="quantity" name="quantity" value="1" min="1" style="width: 100px; text-align: center;">
+                        </div>
+                                                            </td>
+                                                            <td class="remove" ng-click="cart.remove(item.IDSP)"><a>
+                                                                    <img src="//theme.hstatic.net/1000376021/1000834008/14/ic_close.png?v=986" alt=""/>
+                                                            </a></td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                <div class="checkout-note clearfix">
+                                                    <textarea id="note" name="note" rows="8" cols="50"
+                                                        placeholder="Ghi chú"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12 text-right">
+                                                <p class="order-infor">
+                                                    Tổng tiền: <span class="total_price">
+                                                        <b>${{cart.amount}}</b></span>
+                                                </p>
+                                                <div class="cart-buttons">
+                                                    <a class="button dark link-continue"  th:href="@{/order/checkout}"
+                                                        title="Tiếp tục mua hàng">Thanh Toán</a>
+                                                 
+                                                   
+                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="/assets/js/shopping-cart-app.js"></script>
+</body>
+
+</html>

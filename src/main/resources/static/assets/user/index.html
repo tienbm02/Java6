@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <header style="background-color: #242526;">
+        <div class="container d-flex justify-content-between">
+
+            <a class="navbar-brand" href="#"><img src="https://theme.hstatic.net/1000376021/1000834008/14/logo.png?v=986" alt="" width="120"></a>
+
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hổ trợ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-address-card"></i> Lê Khánh Duy</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </header>
+    <article>
+        <div class="row">
+            <div class="col-2" style="min-height: 40rem; background-color:  #242526;">
+                <div class="d-flex align-items-start">
+                    <div class="nav flex-column nav-pills me-3" style="width: 45rem; min-height: 300px; background-color:  #242526;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><span><i class="fa-solid fa-address-card"></i> Thông tin cá nhân</span></button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><span>Cập nhật tài khoản</span></button>
+                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><span>Thông tin giỏ hàng</span></button>
+                        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span>Quay về trang chủ</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10" style="background-color: #050505;">
+
+                <div class=" container text-center ">
+
+                    <div class="h2 " style="color: white; margin-top: 15px; ">THÔNG TIN CÁ NHÂN</div>
+                    <div class="h4 " style="color: white; ">Quản lý thông tin cá nhân của bạn, bao gồm thông tin để chúng tôi có thể liên hệ với bạn.</div>
+
+                    <br>
+                    <div class="row ">
+                        <div class="col-6 ">
+                            <div class="tt container ">
+
+                                <div class="container text-center">
+                                    <div class="row" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <div class="col">
+                                            <b>Họ và tên</b>
+                                            <div class="fullname">
+                                                Bùi Mạnh Tiến
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <i class="fa-solid fa-universal-access" style=" font-size: 50px;
+                                            text-align: center;
+                                            margin-right: -65px;
+                                            margin-top: 38px;
+                                            color: yellow;"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6 ">
+                            <div class="tt container ">
+
+                                <div class="container text-center">
+                                    <div class="row" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <div class="col">
+                                            <b>Số điện thoại</b>
+                                            <div class="fullname">
+                                                0397085566
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <i class="fa-solid fa-universal-access" style=" font-size: 50px;
+                                            text-align: center;
+                                            margin-right: -65px;
+                                            margin-top: 38px;
+                                            color: yellow;"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row ">
+                        <div class="col-6 ">
+                            <div class="tt container ">
+
+                                <div class="container text-center">
+                                    <div class="row" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                        <div class="col">
+                                            <b>Địa chỉ gmail</b>
+                                            <div class="fullname">
+                                                tienbmps15611@fpt.edu.vn
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <i class="fa-solid fa-universal-access" style=" font-size: 50px;
+                                            text-align: center;
+                                            margin-right: -65px;
+                                            margin-top: 38px;
+                                            color: yellow;"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6 ">
+                            <div class="tt container ">
+
+                                <div class="container text-center">
+                                    <div class="row" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                        <div class="col">
+                                            <b>Địa chỉ</b>
+                                            <div class="fullname">
+                                                Tp. HCM
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <i class="fa-solid fa-universal-access" style=" font-size: 50px;
+                                            text-align: center;
+                                            margin-right: -65px;
+                                            margin-top: 38px;
+                                            color: yellow;"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+
+    <!-- Modal họ tên-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sữa Tên cá nhân của bạn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control form-control-lg" type="text" placeholder="Tên Cá nhân" aria-label=".form-control-lg example">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Sửa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SDT-->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sữa Số điện thoại liên hệ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control form-control-lg" type="number" placeholder="Số Điện Thoại" aria-label=".form-control-lg example">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Sửa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal họ tên-->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sữa Địa chỉ gmail của bạn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control form-control-lg" type="email" placeholder="Địa chỉ gmail" aria-label=".form-control-lg example">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Sửa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal họ tên-->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sữa địa chỉ giao hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control form-control-lg" type="text" placeholder="Thông tin địa chỉ" aria-label=".form-control-lg example">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Sửa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+</body>
+
+</html>

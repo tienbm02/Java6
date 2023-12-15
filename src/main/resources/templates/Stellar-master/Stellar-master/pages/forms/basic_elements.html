@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Stellar Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../../vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="shortcut icon" href="../../images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:../../partials/_navbar.html -->
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex align-items-center">
+          <a class="navbar-brand brand-logo" href="../../index.html">
+            <img src="../../images/logo.svg" alt="logo" class="logo-dark" />
+          </a>
+          <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
+          <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Xin Chào</h5>
+          <ul class="navbar-nav navbar-nav-right ml-auto">
+            <form class="search-form d-none d-md-block" action="#">
+              <i class="icon-magnifier"></i>
+              <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+            </form>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="icon-basket-loaded"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="icon-chart"></i></a></li>
+            <li class="nav-item dropdown">
+             
+          
+            </li>
+            <li class="nav-item dropdown language-dropdown d-none d-sm-flex align-items-center">
+              <a class="nav-link d-flex align-items-center dropdown-toggle" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <div class="d-inline-flex mr-3">
+                  <i class="flag-icon flag-icon-vn"></i>
+                </div>
+                <span class="profile-text font-weight-normal">Việt Nam</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
+                <a class="dropdown-item">
+                  <i class="flag-icon flag-icon-us"></i> English </a>
+                <a class="dropdown-item">
+                  <i class="flag-icon flag-icon-vn"></i> Việt Nam </a>
+             
+              </div>
+            </li>
+            <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
+              <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <img class="img-xs rounded-circle ml-2" src="../../images/faces/face8.jpg" alt="Profile image"> <span class="font-weight-normal"> Henry Klein </span></a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                <div class="dropdown-header text-center">
+                  <img class="img-md rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image">
+                  <p class="mb-1 mt-3">Allen Moreno</p>
+                  <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
+                </div>
+                <a class="dropdown-item"><i class="dropdown-item-icon icon-user text-primary"></i> Thông tin cá nhân <span class="badge badge-pill badge-danger">1</span></a>
+                <a class="dropdown-item"><i class="dropdown-item-icon icon-speech text-primary"></i>Tin nhắn</a>
+                <a class="dropdown-item"><i class="dropdown-item-icon icon-close text-primary"></i>Đăng xuất</a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="profile-image">
+                  <img class="img-xs rounded-circle" src="../../images/faces/face8.jpg" alt="profile image">
+                  <div class="dot-indicator bg-success"></div>
+                </div>
+                <div class="text-wrapper">
+                  <p class="profile-name">Mạnh</p>
+                  <p class="designation">Administrator</p>
+                </div>
+                <div class="icon-container">
+                  <i class="icon-bubbles"></i>
+                  <div class="dot-indicator bg-danger"></div>
+                </div>
+              </a>
+            </li>
+   
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">
+                <span class="menu-title">Thống kê</span>
+                <i class="icon-screen-desktop menu-icon"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="http://127.0.0.1:5500/pages/icons/simple-line-icons.html" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Sản Phẩm</span>
+                <i class="icon-layers menu-icon"></i>
+              </a>
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/pages/forms/basic_elements.html">
+                <span class="menu-title">Tài Khoản</span>
+                <i class="icon-grid menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item pro-upgrade">
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Nhân Viên </h3>
+              
+            </div>
+        
+
+              <div class="card-box pb-10">
+                <div class="h5 pd-20 mb-0">Tài khoản nhân viên</div>
+                <table class="data-table table nowrap">
+                  <thead>
+                    <tr>
+                      <th class="table-plus">Họ Và Tên</th>
+                      <th>Giới tính</th>
+                      <th>Năm Sinh</th>
+                      <th>Chức vụ</th>
+                      <th class="datatable-nosort">Hành Động</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="table-plus">
+                        <div class="name-avatar d-flex align-items-center">
+                          <div class="avatar mr-2 flex-shrink-0">
+                            <img
+                              src="vendors/images/photo4.jpg"
+                              class="border-radius-100 shadow"
+                              width="40"
+                              height="40"
+                              alt=""
+                            />
+                          </div>
+                          <div class="txt">
+                            <div class="weight-600">Phạm Văn Mạnh</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nam</td>
+                      <td>2001</td>
+                      <td>Nhân Viên</td>  
+                 
+                      <td>
+                        <div class="table-actions">
+                          <a  style="margin-left:20px;" href="#" data-color="#265ed7"
+                            ><i class="icon-pencil"></i
+                          ></a>
+                          <a style="margin-left:1px;" href="#" data-color="#e95959"
+                            ><i class="icon-trash"></i
+                          ></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-plus">
+                        <div class="name-avatar d-flex align-items-center">
+                          <div class="avatar mr-2 flex-shrink-0">
+                            <img
+                              src="vendors/images/photo4.jpg"
+                              class="border-radius-100 shadow"
+                              width="40"
+                              height="40"
+                              alt=""
+                            />
+                          </div>
+                          <div class="txt">
+                            <div class="weight-600">Nguyễn Việt Đắng</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nam</td>
+                      <td>2001</td>
+                      <td>Nhân Viên</td>  
+                 
+                      <td>
+                        <div class="table-actions">
+                          <a  style="margin-left:20px;" href="#" data-color="#265ed7"
+                            ><i class="icon-pencil"></i
+                          ></a>
+                          <a style="margin-left:1px;" href="#" data-color="#e95959"
+                            ><i class="icon-trash"></i
+                          ></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-plus">
+                        <div class="name-avatar d-flex align-items-center">
+                          <div class="avatar mr-2 flex-shrink-0">
+                            <img
+                              src="vendors/images/photo4.jpg"
+                              class="border-radius-100 shadow"
+                              width="40"
+                              height="40"
+                              alt=""
+                            />
+                          </div>
+                          <div class="txt">
+                            <div class="weight-600">Lê Khánh Duy</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nam</td>
+                      <td>2001</td>
+                      <td>Nhân Viên</td>  
+                 
+                      <td>
+                        <div class="table-actions">
+                          <a  style="margin-left:20px;" href="#" data-color="#265ed7"
+                            ><i class="icon-pencil"></i
+                          ></a>
+                          <a style="margin-left:1px;" href="#" data-color="#e95959"
+                            ><i class="icon-trash"></i
+                          ></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-plus">
+                        <div class="name-avatar d-flex align-items-center">
+                          <div class="avatar mr-2 flex-shrink-0">
+                            <img
+                              src="vendors/images/photo4.jpg"
+                              class="border-radius-100 shadow"
+                              width="40"
+                              height="40"
+                              alt=""
+                            />
+                          </div>
+                          <div class="txt">
+                            <div class="weight-600">Trần Lê Duy</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nam</td>
+                      <td>2001</td>
+                      <td>Nhân Viên</td>  
+                 
+                      <td>
+                        <div class="table-actions">
+                          <a  style="margin-left:20px;" href="#" data-color="#265ed7"
+                            ><i class="icon-pencil"></i
+                          ></a>
+                          <a style="margin-left:1px;" href="#" data-color="#e95959"
+                            ><i class="icon-trash"></i
+                          ></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="table-plus">
+                        <div class="name-avatar d-flex align-items-center">
+                          <div class="avatar mr-2 flex-shrink-0">
+                            <img
+                              src="vendors/images/photo4.jpg"
+                              class="border-radius-100 shadow"
+                              width="40"
+                              height="40"
+                              alt=""
+                            />
+                          </div>
+                          <div class="txt">
+                            <div class="weight-600">Nguyễn Vũ Hảo</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nam</td>
+                      <td>2001</td>
+                      <td>Quản Lý</td>  
+                 
+                      <td>
+                        <div class="table-actions">
+                          <a  style="margin-left:20px;" href="#" data-color="#265ed7"
+                            ><i class="icon-pencil"></i
+                          ></a>
+                          <a style="margin-left:1px;" href="#" data-color="#e95959"
+                            ><i class="icon-trash"></i
+                          ></a>
+                        </div>
+                      </td>
+                    
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="d-flex mt-4 flex-wrap">
+                <p class="text-muted">Trang</p>
+                <nav class="ml-auto">
+                  <ul class="pagination separated pagination-info">
+                    <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-left"></i></a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-right"></i></a></li>
+                  </ul>
+                </nav>
+              </div>
+          
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer">
+           
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../../vendors/select2/select2.min.js"></script>
+    <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="../../js/typeahead.js"></script>
+    <script src="../../js/select2.js"></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<span xmlns:th="http://www.thymeleaf.org">
+	<div class="container d-flex">
+		<div class="p-2 flex-grow-1"><b>Hotline:</b> 1900 88 0088 | <b>Email:</b> shooz.vn@hcm.com | <b>FaceBook:</b>
+			Shooz VietNam
+		</div>
+		<div class="p-2">Hệ Thống Cửa Hàng</div>
+	</div>
+	<div style="border-bottom: 1px solid #f0f0f0;"></div>
+
+	<nav class="navbar container navbar-expand-lg">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img
+					src="https://theme.hstatic.net/1000376021/1000834008/14/logo.png?v=986" alt="" width="90"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- THUONG HIỆU -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark"   th:href="@{/product/cuahang}">
+				Trang chủ
+			</a> 
+        </li>
+        <!-- GIỚI TÍNH NAM -->
+        <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							NAM
+			</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">NIKE</a></li>
+                <li><a class="dropdown-item" href="#">ADIDAS</a></li>
+                <li><a class="dropdown-item" href="#">VIONIC</a></li>
+                <li><a class="dropdown-item" href="#">GIẦY TÂY</a></li>
+                <li><a class="dropdown-item" href="#">DÉP</a></li>
+            </ul>
+        </li>
+        <!-- GIỚI TÍNH NỮ -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				NỮ
+			</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">NIKE</a></li>
+                <li><a class="dropdown-item" href="#">ADIDAS</a></li>
+                <li><a class="dropdown-item" href="#">GIÀY BÚP BÊ</a></li>
+                <li><a class="dropdown-item" href="#">GIÀY CAO GÓT</a></li>
+                <li><a class="dropdown-item" href="#">GIÀY LƯỜI</a></li>
+            </ul>
+        </li>
+        <!-- GIẦY TRẺ EM -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							TRẺ EM
+						</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">GIÀY SNEAKER</a></li>
+                <li><a class="dropdown-item" href="#">SANDALS</a></li>
+                <li><a class="dropdown-item" href="#">GIẦY BÚP BÊ</a></li>
+                <li><a class="dropdown-item" href="#">GIẦY LƯỜI</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    <div class="d-flex">
+    <th:block th:unless="${#request.remoteUser}">
+			<a type="button" class="btn btn-primary btn-sm" href="/auth/login/form">Đăng nhập</a>
+	</th:block>
+   <th:block th:if="${#request.remoteUser}">
+        <div class="p-2">
+            <div class="dropdown">
+                <a class="dropdown-toggle" type="button" id="taikhoan" data-bs-toggle="dropdown" aria-expanded="false">
+					Xin chào: <b>[[${#request.remoteUser}]]</b>
+				</a>
+                <ul class="dropdown-menu" aria-labelledby="taikhoan" style=" background-color: white !important;">
+                    <li>
+                        <a class="dropdown-item" href="/admin/home/index"> <i class="fa-solid fa-pen-ruler"></i> Quản trị viên
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#"> <i class="fa-regular fa-cart-arrow-up"></i> Giỏ hàng
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#"> <i class="fa-solid fa-calendar-pen"></i> Sữa thông tin</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a href="/auth/logoff" class="dropdown-item" onclick="alert('hi')"> <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+                    </li>
+                </ul>
+                <a th:href="@{/cart/Giohang}"> 
+                    <button  class="btn btn-succes">
+                       <i class="fas fa-shopping-cart">{{cart.count}}</i>
+                   </button></a>
+            </div>
+        </div>
+    </th:block>
+    
+    </div>
+</div>
+
+</div>
+</nav>
+</span>
